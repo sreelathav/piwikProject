@@ -1,6 +1,6 @@
 """  Author: Sree Latha Vallabhaneni
      prepared and tested March - May 2015
-     Pytho script: liveVisitorHTMLreport.py
+     Python script: liveVisitorHTMLreport.py
      command to run eg: python liveVisitorHTMLreport.py 3 1
      Program to extract the live visitor data from Piwik analytics API
      The requirements are Piwik instance Url, the token auth of the user (with view permissions on the data)
