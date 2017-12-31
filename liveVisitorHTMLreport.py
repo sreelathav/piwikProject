@@ -19,7 +19,7 @@ global idsite
 
 def getWebsiteURL():
     
-    url = "http://52.17.253.123/piwik/?module=API&method=SitesManager.getSiteUrlsFromId&idSite="+idsite+"&format=json&token_auth=1a228667ee054bbe4d17943145b7822b"
+    url = "http://IP-ADDRESS/piwik/?module=API&method=SitesManager.getSiteUrlsFromId&idSite="+idsite+"&format=json&token_auth=1a228667ee054bbe4d17943145b7822b"
     req = urllib2.Request(url)
     response = urllib2.urlopen(req)
     json_string = response.read()
@@ -28,7 +28,7 @@ def getWebsiteURL():
 
 def getLiveVisitorId():
     
-    url = "http://52.17.253.123/piwik/?module=API&method=Live.getMostRecentVisitorId&idSite="+idsite+"&format=json&token_auth=1a228667ee054bbe4d17943145b7822b"
+    url = "http://IP-AD/piwik/?module=API&method=Live.getMostRecentVisitorId&idSite="+idsite+"&format=json&token_auth=1a228667ee054bbe4d17943145b7822b"
     req = urllib2.Request(url)
     response = urllib2.urlopen(req)
     json_string = response.read()
@@ -38,7 +38,7 @@ def getLiveVisitorId():
 def getVisitorProfile():
     
     visitorId = getLiveVisitorId()
-    url = "http://52.17.253.123/piwik/?module=API&method=Live.getVisitorProfile&idSite="+idsite+"&VisitorId==visitorId&format=json&token_auth=1a228667ee054bbe4d17943145b7822b"
+    url = "http://IP-AD/piwik/?module=API&method=Live.getVisitorProfile&idSite="+idsite+"&VisitorId==visitorId&format=json&token_auth=1a228667ee054bbe4d17943145b7822b"
     
     req = urllib2.Request(url)
     response = urllib2.urlopen(req)
